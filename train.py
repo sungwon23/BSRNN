@@ -45,8 +45,8 @@ class Trainer:
         self.discriminator = Discriminator(ndf=16).cuda()
 # #         summary(self.discriminator, [(1, 1, int(self.n_fft/2)+1, args.cut_len//self.hop+1),
 # #                                      (1, 1, int(self.n_fft/2)+1, args.cut_len//self.hop+1)])
-        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=args.init_lr*0.98)
-        self.optimizer_disc = torch.optim.Adam(self.discriminator.parameters(), lr=args.init_lr*0.98)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=args.init_lr)
+        self.optimizer_disc = torch.optim.Adam(self.discriminator.parameters(), lr=args.init_lr)
         
     def train_step(self, batch, use_disc):
         clean = batch[0].cuda()
