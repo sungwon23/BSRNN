@@ -47,3 +47,8 @@ self.model = BSRNN(num_channel=64, num_layer=5).cuda()
 ```
 python3 evaluation.py --test_dir <dir to VCTK-DEMAND/test> --model_path <path to the best ckpt>
 ```
+
+## Reference
+This repository contains codes adapted/copied from the followings:
+-  https://github.com/ruizhecao96/CMGAN (No License specified)
+
