@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
 from module import *
 from natsort import natsorted
@@ -53,30 +50,23 @@ def evaluation(model_path, noisy_dir, clean_dir, save_tracks, saved_dir):
     audio_list = natsorted(audio_list)
     num = len(audio_list)
     metrics_total = np.zeros(6)
-    it = 0
     for audio in tqdm(audio_list):
         noisy_path = os.path.join(noisy_dir, audio)
         clean_path = os.path.join(clean_dir, audio)
         est_audio, length = enhance_one_track(model, noisy_path, saved_dir, 16000*2, n_fft, n_fft//4, save_tracks)
         noisy_audio, sr = librosa.load(noisy_path,sr=16000)
         clean_audio, sr = librosa.load(clean_path,sr=16000)
-        assert sr == 16000
-#         if len(clean_audio) > 32000:
-#             clean_audio = clean_audio[:32000]
-#             est_audio = est_audio[:32000]
-        
+        assert sr == 16000        
         metrics = compute_metrics(clean_audio, est_audio, sr, 0)
         metrics = np.array(metrics)
         metrics_total += metrics
-        it += 1
-        print(metrics_total/it)
     metrics_avg = metrics_total / num
     print('pesq: ', metrics_avg[0], 'csig: ', metrics_avg[1], 'cbak: ', metrics_avg[2], 'covl: ',
           metrics_avg[3], 'ssnr: ', metrics_avg[4], 'stoi: ', metrics_avg[5])
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--model_path", type=str, default='./saved_model/gene2_epoch_114_0.045_0.037',
+parser.add_argument("--model_path", type=str, default='./saved_model/checkpoint',
                     help="the path where the model is saved")
 parser.add_argument("--test_dir", type=str, default='../../dataset/VCTK-DEMAND/test/',
                     help="noisy tracks dir to be enhanced")

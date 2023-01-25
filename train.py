@@ -209,10 +209,6 @@ class Trainer:
             scheduler_G.step()
             scheduler_D.step()
 
-
-# In[4]:
-
-
 def main():
     print(args)
     available_gpus = [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())]
@@ -220,10 +216,6 @@ def main():
     train_ds, test_ds = dataloader.load_data(args.data_dir, args.batch_size, 4, args.cut_len)
     trainer = Trainer(train_ds, test_ds)
     trainer.train()
-
-
-# In[5]:
-
 
 if __name__ == '__main__':
     main()
