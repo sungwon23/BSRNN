@@ -1,4 +1,4 @@
-# BSRNN
+## BSRNN
 
 Unofficial PyTorch implementation of the paper "HIGH FIDELITY SPEECH ENHANCEMENT WITH BAND-SPLIT RNN" (https://arxiv.org/abs/2212.00406) on DEMAND-Voicebank Dataset (https://datashare.ed.ac.uk/handle/10283/2791).
 
@@ -16,3 +16,5 @@ N (feature dimension) : 64, L (the number of lstm layers) : 5
 | BSRNN(N=64, L=5)  | 3.10 | 9.56 | 0.95 |
 
 Audio files are in `saved_tracks_best`
+
+## Train and inference
