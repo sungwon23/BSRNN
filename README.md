@@ -7,10 +7,12 @@ Unofficial PyTorch implementation of the paper "HIGH FIDELITY SPEECH ENHANCEMENT
 # Result
 
 Choosed parameter settings 
+
 N (feature dimension) : 64
+
 L (the number of lstm layers) : 5
 
 |                   | PESQ | SSDR | STOI |
 | ----------------- | ---- | ---- | ---- |
-| Noisy             |  2.5 |  1.9 |  1.9 | 
-| BSRNN(N=64, L=5)  | 12.6 | 10.2 |  1.9 |
+| Noisy             | 1.97 | 1.68 | 0.91 | 
+| BSRNN(N=64, L=5)  | 3.10 | 9.56 | 0.95 |
