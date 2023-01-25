@@ -43,7 +43,7 @@ If you want to adjust the model parameters, change the variables in `train.py`.
 ```
 self.model = BSRNN(num_channel=64, num_layer=5).cuda()
 ```
-### 4. Inference:
+### 4. Inference and evaluate metrics:
 ```
 python evaluation.py --test_dir <dir to VCTK-DEMAND/test> --model_path <path to the best ckpt>
 ```
