@@ -50,5 +50,5 @@ python3 evaluation.py --test_dir <dir to VCTK-DEMAND/test> --model_path <path to
 
 ## Reference
 This repository contains codes adapted from the following repository:
--  https://github.com/ruizhecao96/CMGAN
+-  https://github.com/ruizhecao96/CMGAN (MIT License)
 
