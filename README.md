@@ -39,7 +39,7 @@ Download VCTK-DEMAND dataset (https://datashare.ed.ac.uk/handle/10283/2791), cha
 ```
 python train.py --data_dir <dir to VCTK-DEMAND dataset>
 ```
-If you want to adjust the model parameters, change the value of variables in `train.py`.
+If you want to adjust parameters of the model, change the value of variables in `train.py`.
 ```
 self.model = BSRNN(num_channel=64, num_layer=5).cuda()
 ```
