@@ -15,7 +15,7 @@ N (feature dimension) : 64, L (the number of lstm layers) : 5
 | Noisy             | 1.97 | 1.68 | 0.91 | 
 | BSRNN(N=64, L=5)  | 3.10 | 9.56 | 0.95 |
 
-Audio files are in `saved_tracks_best`
+Audio files are in `saved_tracks_best` folder.
 
 ## Train and inference
 
