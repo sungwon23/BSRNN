@@ -8,9 +8,7 @@ Unofficial PyTorch implementation of the paper "HIGH FIDELITY SPEECH ENHANCEMENT
 
 Choosed parameter settings 
 
-N (feature dimension) : 64
-
-L (the number of lstm layers) : 5
+N (feature dimension) : 64, L (the number of lstm layers) : 5
 
 |                   | PESQ | SSDR | STOI |
 | ----------------- | ---- | ---- | ---- |
