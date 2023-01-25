@@ -19,8 +19,8 @@ Audio files are in `saved_tracks_best`
 
 ## Train and inference
 
-### Dependencies:
-used packages are can be installed by
+### 1. Dependencies:
+Used packages are can be installed by:
 
 ```pip install -r requirements.txt```
 
