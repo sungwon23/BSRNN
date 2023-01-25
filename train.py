@@ -198,9 +198,8 @@ class Trainer:
                 if (step % args.log_interval) == 0:
                     logging.info(template.format(epoch, step, loss_total/step, loss_gan/step))
 
-            gen_loss, ckpt_loss = self.test(use_disc)
-            path = os.path.join(args.save_model_dir, 'gene_epoch_' + str(epoch) + '_' + str(gen_loss)[:5]
-                                                                                 + '_' + str(ckpt_loss)[:5])
+            gen_loss = self.test(use_disc)
+            path = os.path.join(args.save_model_dir, 'gene_epoch_' + str(epoch) + '_' + str(gen_loss)[:5])
             path_d = os.path.join(args.save_model_dir, 'disc_epoch_' + str(epoch))
             if not os.path.exists(args.save_model_dir):
                 os.makedirs(args.save_model_dir)
