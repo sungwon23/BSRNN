@@ -41,7 +41,7 @@ Run train.py
 ```
 python3 train.py --data_dir <dir to VCTK-DEMAND dataset>
 ```
-If you want to adjust the model setting, change the number in `train.py`  
+If you want to adjust the model setting, change the parameters in `train.py`  
 ```
 self.model = BSRNN(num_channel=64, num_layer=5).cuda()
 ```
