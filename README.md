@@ -37,7 +37,6 @@ Download VCTK-DEMAND dataset (https://datashare.ed.ac.uk/handle/10283/2791), cha
 ```
 
 ### 3. Train:
-Run train.py
 ```
 python3 train.py --data_dir <dir to VCTK-DEMAND dataset>
 ```
@@ -47,7 +46,6 @@ self.model = BSRNN(num_channel=64, num_layer=5).cuda()
 ```
 
 ### 4. Inference:
-Evaluation with the best ckpt:
 ```
 python3 evaluation.py --test_dir <dir to VCTK-DEMAND/test> --model_path <path to the best ckpt>
 ```
