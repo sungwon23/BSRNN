@@ -28,7 +28,7 @@ parser.add_argument("--data_dir", type=str, default='../../dataset/VCTK-DEMAND/'
 parser.add_argument("--save_model_dir", type=str, default='./saved_model',
                     help="dir of saved model")
 parser.add_argument("--loss_weights", type=list, default=[0.5, 0.5, 1],
-                    help="weights of RI components, magnitude, time loss, and Metric Disc")
+                    help="weights of RI components, magnitude, and Metric Disc")
 args, _ = parser.parse_known_args()
 logging.basicConfig(level=logging.INFO)
 
