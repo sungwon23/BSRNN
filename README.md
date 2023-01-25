@@ -24,8 +24,8 @@ Used packages are can be installed by:
 
 ```pip install -r requirements.txt```
 
-### Download dataset:
-Download VCTK-DEMAND dataset with 16 kHz (https://datashare.ed.ac.uk/handle/10283/2791), change the dataset dir:
+### 2. Download dataset:
+Download VCTK-DEMAND dataset (https://datashare.ed.ac.uk/handle/10283/2791), change the dataset dir:
 ```
 -VCTK-DEMAND/
   -train/
@@ -36,8 +36,8 @@ Download VCTK-DEMAND dataset with 16 kHz (https://datashare.ed.ac.uk/handle/1028
     -clean/
 ```
 
-### Step 3:
-If you want to train the model, run train.py
+### 3. Train:
+Run train.py
 ```
 python3 train.py --data_dir <dir to VCTK-DEMAND dataset>
 ```
